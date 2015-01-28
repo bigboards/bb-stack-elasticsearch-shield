@@ -1,7 +1,7 @@
 stack:
   views:
     - label: "Marvel"
-      url: "http:{{ nodes[hex.name + '-n1'].ip }}-n1:9200/_plugin/marvel"
+      url: "http:<< nodes[hex.name + '-n1'].ip >>-n1:9200/_plugin/marvel"
       description: "Marvel’s overview dashboard provides full details on the health of your cluster, including cluster-wide metrics, overview of all nodes and indices and events such as master election or the addition of new nodes."
   containers:
     elasticsearch:
