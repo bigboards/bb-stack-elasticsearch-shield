@@ -1,8 +1,8 @@
 stack:
   views:
-    - label: "Marvel"
-      url: "http:{{ nodes[hex.name + '-n1'].ip }}-n1:9200/_plugin/marvel"
-      description: "Marvel overview dashboard provides full details on the health of your cluster, including cluster-wide metrics, overview of all nodes and indices and events such as master election or the addition of new nodes."
+    - label: "Kopf"
+      url: "http:<< nodes[hex.name + '-n1'].ip >>:9200/_plugin/kopf"
+      description: "kopf is a simple web administration tool for ElasticSearch written in JavaScript + AngularJS + jQuery + Twitter bootstrap."
   containers:
     elasticsearch:
       image: "bigboards/elasticsearch-shield-armv7l"
