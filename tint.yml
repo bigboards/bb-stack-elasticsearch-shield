@@ -1,7 +1,7 @@
 stack:
   views:
     - label: "Kopf"
-      url: "http:<< nodes[hex.name + '-n1'].ip >>:9200/_plugin/kopf"
+      url: "http:{{ nodes[hex.name + '-n1'].ip }}:9200/_plugin/kopf"
       description: "kopf is a simple web administration tool for ElasticSearch written in JavaScript + AngularJS + jQuery + Twitter bootstrap."
   containers:
     elasticsearch:
