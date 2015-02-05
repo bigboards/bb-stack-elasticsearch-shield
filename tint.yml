@@ -1,7 +1,7 @@
 stack:
   views:
     - label: "Kopf"
-      url: "http:{{ nodes[hex.name + '-n1'].ip }}:9200/_plugin/kopf"
+      url: "http://{{ nodes[hex.name + '-n1'].ip }}:9200/_plugin/kopf"
       description: "kopf is a simple web administration tool for ElasticSearch written in JavaScript + AngularJS + jQuery + Twitter bootstrap."
   containers:
     elasticsearch:
@@ -10,9 +10,11 @@ stack:
       ports:
         - 9200
         - 9300
-      config: "/elasticsearch/config"
+      config:
+        host_path: "elasticsearch"
+        container_path: "/elasticsearch/config"
   groups:
-    es_node:
+    - name: "es_node"
       runs_on: "all"
       containers:
         - "elasticsearch"
