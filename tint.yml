@@ -1,3 +1,11 @@
+slug: bb-stack-elasticsearch-shield
+name: Elasticsearch Shield
+description: Shield brings enterprise-grade security to Elasticsearch
+type: stack
+owner:
+  username: bigboards
+  displayName: bigboards
+logo: https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2015/Jan/28/1114545535-0-bb-stack-elasticsearch-shield-logo_avatar.png
 stack:
   views:
     - label: "Kopf"
